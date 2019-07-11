@@ -4,8 +4,8 @@
     "keywords": ["string"],
     "authors": [
         {
-            "name": "Nikita Zarubin",
-            "email": "nikitadimitrov@gmail.com"
+            "name": "runcore",
+            "homepage": "https://habr.com/ru/post/53210/",
         }
     ],
     "autoload": {
