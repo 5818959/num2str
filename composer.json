@@ -1,0 +1,16 @@
+{
+    "name": "nikserg/Num2Str",
+    "description": "Сумма прописью",
+    "keywords": ["string"],
+    "authors": [
+        {
+            "name": "Nikita Zarubin",
+            "email": "nikitadimitrov@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "nikserg\\Num2Str\\": ""
+      }
+    }
+}
