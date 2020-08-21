@@ -12,6 +12,10 @@ class Num2Str
      * Формат суммы в рублях.
      */
     const FORMAT_MONEY = 2;
+    /**
+     * Формат формат целого чиисла без единицы измерения.
+     */
+    const FORMAT_NUMBER = 3;
 
     /**
      * Возвращает сумму прописью.
@@ -91,6 +95,11 @@ class Num2Str
         } else {
             $out[] = $nul;
         }
+
+        if (self::FORMAT_NUMBER === $format) {
+            return trim(join(' ', $out));
+        }
+
         $out[] = self::morph(intval($rub), $unit[1][0], $unit[1][1], $unit[1][2]); // rub
         $out[] = $kop . ' ' . self::morph($kop, $unit[0][0], $unit[0][1], $unit[0][2]); // kop
 
@@ -119,6 +128,18 @@ class Num2Str
     public static function money($num)
     {
         return self::convert($num, self::FORMAT_MONEY);
+    }
+
+    /**
+     * Возращает целое число прописью.
+     *
+     * @param float $num
+     * @return string
+     * @author grozz97 <grozz97@yandex.ru>
+     */
+    public static function number($num)
+    {
+        return self::convert($num, self::FORMAT_NUMBER);
     }
 
     /**
